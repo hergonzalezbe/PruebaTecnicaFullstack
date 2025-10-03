@@ -1,0 +1,12 @@
+# Angular
+ClientesFrontend/node_modules
+ClientesFrontend/dist
+ClientesFrontend/.angular/cache
+
+# .NET
+ApiClientesSolution/ApiClientes/bin
+ApiClientesSolution/ApiClientes/obj
+ApiClientesSolution/.vs
+
+# Otros
+*.user
