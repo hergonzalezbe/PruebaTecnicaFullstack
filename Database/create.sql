@@ -1,0 +1,15 @@
+CREATE DATABASE DBClientes
+GO
+
+USE DBClientes
+GO
+
+CREATE TABLE Clientes (
+    IdCliente INT IDENTITY PRIMARY KEY,
+    Identificacion NVARCHAR(20) NOT NULL UNIQUE,
+    Nombre NVARCHAR(100) NOT NULL,
+    Apellido NVARCHAR(100) NOT NULL,
+    Email NVARCHAR(100) NOT NULL,
+    FechaCreacion DATETIME DEFAULT GETDATE(),
+    FechaActualizacion DATETIME NULL
+)
