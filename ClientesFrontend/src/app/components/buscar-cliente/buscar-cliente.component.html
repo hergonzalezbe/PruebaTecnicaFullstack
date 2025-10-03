@@ -1,0 +1,24 @@
+<div class="container">
+  <h2>Buscar Cliente</h2>
+
+  <mat-form-field appearance="outline" class="w-100">
+    <mat-label>Identificación</mat-label>
+    <input matInput [(ngModel)]="identificacion" placeholder="Ingrese identificación">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="buscarCliente()" [disabled]="loading">
+    Buscar
+  </button>
+
+  <div *ngIf="loading" style="margin-top:10px;">Cargando...</div>
+  <div *ngIf="errorMessage" style="margin-top:10px; color:red;">{{ errorMessage }}</div>
+
+  <div *ngIf="cliente" style="margin-top:20px;">
+    <h3>Datos del Cliente</h3>
+    <p><b>Nombre:</b> {{cliente.nombre}} {{cliente.apellido}}</p>
+    <p><b>Email:</b> {{cliente.email}}</p>
+    <p><b>Identificación:</b> {{cliente.identificacion}}</p>
+    <p><b>Fecha Creación:</b> {{cliente.fechaCreacion}}</p>
+    <p><b>Última Actualización:</b> {{cliente.fechaActualizacion}}</p>
+  </div>
+</div>
